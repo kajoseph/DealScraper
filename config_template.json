@@ -12,5 +12,7 @@
         "from": "example@anywhere.net",
         "to": "1234567890@text.com,myemail@sample.org",
         "subject": "Sending Email using Node.js"
-    }
+    },
+    "exitOnNotFound": "false",
+    "notifyOnNotFound": "false"
 }
