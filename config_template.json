@@ -1,0 +1,16 @@
+{
+    "url":"https://www.example.com",
+    "element":".class1.class2",
+    "transport":{
+        "service":"gmail",
+        "auth": {
+            "user": "example@gmail.com",
+            "pass": "example"
+        }
+    },
+    "mailOptions": {
+        "from": "example@anywhere.net",
+        "to": "1234567890@text.com,myemail@sample.org",
+        "subject": "Sending Email using Node.js"
+    }
+}
