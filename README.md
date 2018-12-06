@@ -16,6 +16,5 @@ Replace in `config.json` example values with yours.
 ## Run
 In command line:
 ```bash
-node index.js
+npm start
 ```
-

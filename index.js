@@ -6,7 +6,11 @@ const config = require('./config.json');
 
 
 const url = config.url;
+const notifyOnNotFound = config.notifyOnNotFound == "true";
+const exitOnNotFound = config.exitOnNotFound == "true";
 var lastMessageSendTime = new Date("1/1/1999");
+var notFoundNotificationSent = false;
+
 
 function Run(){
 
@@ -20,8 +24,13 @@ function Run(){
         var numdealsnow = $(config.element, html).length;
         
         // If class isn't found, send notification and exit process.
-        if (numdealsnow == 0) {
-            SendMail("Deal class not found.", process.exit);
+        if (numdealsnow == 0 && (notifyOnNotFound || exitOnNotFound)) {
+            if(!notifyOnNotFound) 
+                process.exit();
+
+            if(!notFoundNotificationSent)
+                SendMail("Deal element not found.", function() { notFoundNotificationSent = true; exitOnNotFound ? process.exit() : null; });
+            return;
         }
 
            
