@@ -11,7 +11,8 @@ npm install
 
 Create a file called `config.json` and copy contents of `config_template.json` to it.
 
-Replace in `config.json` example values with yours.
+Replace `config.json` example values with yours.
+* If using Gmail, you'll probbaly need to allow less secure apps to access your account [here](https://myaccount.google.com/lesssecureapps)
 
 ## Run
 In command line:
